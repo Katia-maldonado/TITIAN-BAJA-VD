@@ -2,9 +2,6 @@
 
 - what is baja
 
-- VD/DAQ
-  list all sensors and stuff
-
 - list underclassmen projs
 
 - cad
