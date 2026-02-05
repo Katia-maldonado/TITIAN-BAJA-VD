@@ -31,10 +31,10 @@ This data approach allows us to make informed adjustments to **spring rates, fly
 
 ## To Do List
 
-- Hall effect sensor – Primary RPM  [completed]
-- Hall effect sensor – Secondary RPM  [completed]  
-- Hall effect sensor – Wheel RPM  
-- Push button (test control / reset)  [completed]  
-- LED indicators (system status)  [completed]  
-- Real Time Clock (RTC)  [completed]  
-- Display screen for real time output  
+✔ Hall effect sensor – Primary RPM 
+✔ Hall effect sensor – Secondary RPM  
+  Hall effect sensor – Wheel RPM  
+✔ Push button (test control / reset) 
+✔ LED indicators (system status) 
+✔ Real Time Clock (RTC)
+  Display screen for real time output  
