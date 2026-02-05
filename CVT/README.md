@@ -6,7 +6,7 @@ The CVT dyno harness uses an **Arduino Uno with an SD card reader shield** to lo
 
 - Hall effect sensor – Primary RPM  
 - Hall effect sensor – Secondary RPM  
-- Hall effect sensor – Wheel RPM  
+- Hall effect sensor – Disk Brake RPM  
 - Push button (test control / reset)  
 - LED indicators (system status)  
 - Real Time Clock (RTC)  
