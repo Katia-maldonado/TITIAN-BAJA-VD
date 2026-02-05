@@ -4,7 +4,7 @@ I have a few underclassmen projects for anyone interested in writing code for **
 
 For coding related work, please reference **version 8 (v8)** of the code located in either the **CVT** or **DAQ** folders. This version should be used as the baseline for development.
 
-If you’re interested, **reach out to Katia on Discord**, and I can share the current code files and help you get started.
+If you’re interested, **reach out to Katia on Discord**, and she can share the current code files and help you get started.
 
 ---
 
