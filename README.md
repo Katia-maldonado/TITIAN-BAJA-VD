@@ -1,6 +1,4 @@
-# Baja SAE – Titan Racing (CSUF)
-
-## Titan Racing Baja
+# Baja SAE – Titan Racing Baja
 At **CSUF**, our Baja SAE team consists of 14 members, and our goal is to compete in the BAJA SAE Competion that is in Washougal, Washington in May 2026. We are divided into four subteams:
 
 - Chassis / Ergonomics 
