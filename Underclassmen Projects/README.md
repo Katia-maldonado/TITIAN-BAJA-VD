@@ -20,11 +20,11 @@ If you’re interested, **reach out to Katia on Discord**, and she can answer an
 
 ### DAQ (On Vehicle)
 
-- [ ] Code the **IMU (MPU-6050)** to record and send its data to the Arduino  
-- [ ] Log IMU data onto an SD card using the **SD Card Reader Shield** (so it can be exported to Excel / MATLAB later)  
-- [ ] IMU signals to record:
-  - [ ] Angular velocity (gyro): **X, Y, Z**
-  - [ ] Linear acceleration (accelerometer): **X, Y, Z**
+- [x] Code the **IMU (MPU-6050)** to record and send its data to the Arduino  
+- [x] Log IMU data onto an SD card using the **SD Card Reader Shield** (so it can be exported to Excel / MATLAB later)  
+- [x] IMU signals to record:
+  - [x] Angular velocity (gyro): **X, Y, Z**
+  - [x] Linear acceleration (accelerometer): **X, Y, Z**
 
 > Note: The MPU-6050 is a 3-axis accelerometer and gyroscope. There are many examples available on GitHub and YouTube that can be used as references.
 
