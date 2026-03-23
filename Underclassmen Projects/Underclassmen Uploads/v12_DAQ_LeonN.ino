@@ -43,7 +43,7 @@ WARNING: Teensy 4.1 is STRICTLY 3.3V. Do not plug 5V or 12V directly into pins, 
 --- DIGITAL PINS --- [REWORKED]
 - Primary RPM (Spark)     -> Pin 27 (Requires 12V to 3.3V Divider)
 - Secondary RPM (Hall)    -> Pin 28 (Requires 5V to 3.3V Divider)
-- LED Indicator           -> Pin 29 (Use inline resistor to Ground)
+- LED Indicator           -> Pin 29 (Operates on 5-12v, requires MOSFET + 1x 10k resistor to prevent float states)
 - Push Button             -> Pin 30 (Wire other side to Ground, uses internal pullup)
 
 --- IMU SPECIFIC WIRING ---
