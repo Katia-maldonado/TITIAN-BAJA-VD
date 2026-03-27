@@ -37,12 +37,12 @@ WARNING: Teensy 4.1 is STRICTLY 3.3V. Do not plug 5V or 12V directly into pins, 
 
 --- ANALOG PINS (Require 5V to 3.3V Divider per sensor) --- [REWORKED]
 - Front Brake Pressure    -> Pin 24 (A0)
-- Rear Brake Pressure     -> Pin 25 (A1)
-- CVT Belt Temp (AiM IR)  -> Pin 26 (A2)
+- Rear Brake Pressure     -> Pin 26 (A1)
+- CVT Belt Temp (AiM IR)  -> Pin 38 (A2)
 
 --- DIGITAL PINS --- [REWORKED]
-- Primary RPM (Spark)     -> Pin 27 (Requires 12V to 3.3V Divider)
-- Secondary RPM (Hall)    -> Pin 28 (Requires 5V to 3.3V Divider)
+- Primary RPM (Spark)     -> Pin 10 (Requires 12V to 3.3V Divider)
+- Secondary RPM (Hall)    -> Pin 12 (Requires 5V to 3.3V Divider)
 - LED Indicator           -> Pin 29 (Operates on 5-12v, requires MOSFET + 1x 10k resistor to prevent float states)
 - Push Button             -> Pin 30 (Wire other side to Ground, uses internal pullup)
 
@@ -67,15 +67,15 @@ TinyGPSPlus gps;
 WDT_T4<WDT1> wdt;
 
 // -------- Pins -------- [REWORKED]
-const int pinRPM_Primary   = 27;   // AiM Adapter [12V DIVIDER]
-const int pinRPM_Secondary = 28;   // Hall Sensor [5V DIVIDER]
+const int pinRPM_Primary   = 10;   // AiM Adapter [12V DIVIDER]
+const int pinRPM_Secondary = 12;   // Hall Sensor [5V DIVIDER]
 const int ledPin           = 29;
 const int buttonPin        = 30;
 
 // Analog Pins [REWORKED]
 const int pinBrakeF        = 24;  // A0 - Front Brake (DataQ) [5V DIVIDER]
-const int pinBrakeR        = 25;  // A1 - Rear Brake (DataQ) [5V DIVIDER]
-const int pinCVT           = 26;  // A2 - CVT Temp (AiM Analog) [5V DIVIDER]
+const int pinBrakeR        = 26;  // A1 - Rear Brake (DataQ) [5V DIVIDER]
+const int pinCVT           = 38;  // A2 - CVT Temp (AiM Analog) [5V DIVIDER]
 
 // -------- Settings --------
 const unsigned long SAMPLE_MS     = 50;   // 20Hz Sampling
