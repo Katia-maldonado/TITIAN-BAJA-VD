@@ -1,5 +1,5 @@
 /*
-Version: v13
+Version: v13.5
 Author: Leon Nguyen
 System: DAQ
 
@@ -29,7 +29,6 @@ TEENSY 4.1 HARDWARE WIRING GUIDE
 
 WARNING: Teensy 4.1 is STRICTLY 3.3V.
 Do not plug 5V or 12V directly into pins, use Voltage Dividers!
-Ensure Voltage Dividers are in place for all 5V/12V sensors!!!
 
 --- COMMUNICATION PINS --- 
 - IMU & RTC (SDA)        -> Pin 18 
@@ -39,10 +38,10 @@ Ensure Voltage Dividers are in place for all 5V/12V sensors!!!
 - XBee RX (Serial1 RX1)  -> Pin 0  (Connects to XBee's TX(DOUT) pin) 
 - XBee TX (Serial1 TX1)  -> Pin 1  (Connects to XBee's RX(DIN) pin) 
 
---- ANALOG PINS (Require 5V to 3.3V Divider per sensor) --- 
-- Front Brake Pressure   -> Pin 24 
-- Rear Brake Pressure    -> Pin 26 
-- CVT Belt Temp (AiM IR) -> Pin 38 
+--- ANALOG PINS --- 
+- Front Brake Pressure   -> Pin 24 (Requires Shunt Resistor)
+- Rear Brake Pressure    -> Pin 26 (Requires Shunt Resistor)
+- CVT Belt Temp (AiM IR) -> Pin 38 (Requires 5V to 3.3V Divider)
 
 --- DIGITAL PINS --- 
 - Primary RPM (Spark)    -> Pin 10 (Requires 12V to 3.3V Divider)
@@ -75,8 +74,8 @@ const int ledPin           = 29;
 const int buttonPin        = 30;
 
 // Analog Pins 
-const int pinBrakeF        = 24;   // Front Brake (DataQ)   [5V DIVIDER]
-const int pinBrakeR        = 26;   // Rear Brake (DataQ)    [5V DIVIDER]
+const int pinBrakeF        = 24;   // Front Brake (DataQ)   [SHUNT RESISTOR]
+const int pinBrakeR        = 26;   // Rear Brake (DataQ)    [SHUNT RESISTOR]
 const int pinCVT           = 38;   // CVT Temp (AiM Analog) [5V DIVIDER]
 
 // -------- Settings --------
@@ -162,7 +161,8 @@ void writeHeader() {
   Serial.println(F("Header written"));
 }
 
-// --- Helper Functions --- [MAJOR]
+// --- Helper Functions --
+// BPS model outputs 4-20mA [MAJOR]
 float readPressurePSI(int pin) {
   int val = analogRead(pin);
   // Convert 10-bit ADC value to voltage based on 3.3V logic
